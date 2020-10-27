@@ -1,9 +1,17 @@
 package com.mathews.codetracker.app
 
 import android.app.Application
-import dagger.hilt.android.HiltAndroidApp
+import com.mathews.codetracker.app.di.ContextModule
+import com.mathews.codetracker.app.di.DaggerApplicationComponent
 
-@HiltAndroidApp
 class MainApplication : Application() {
+
+    override fun onCreate() {
+        super.onCreate()
+
+        val component = DaggerApplicationComponent.builder()
+            .contextModule(ContextModule(this.applicationContext))
+            .build()
+    }
 
 }

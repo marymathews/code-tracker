@@ -1,4 +1,7 @@
 package com.mathews.codetracker.modules.splash.mvp
 
-class SplashScreenPresenter {
+import javax.inject.Inject
+
+class SplashScreenPresenter
+    @Inject constructor(view: SplashScreenView) {
 }
