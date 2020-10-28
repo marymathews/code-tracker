@@ -6,6 +6,10 @@ import com.mathews.codetracker.app.di.DaggerApplicationComponent
 
 class MainApplication : Application() {
 
+    companion object {
+        val instance = MainApplication()
+    }
+
     override fun onCreate() {
         super.onCreate()
 
@@ -14,4 +18,7 @@ class MainApplication : Application() {
             .build()
     }
 
+    fun getInstance() : MainApplication {
+        return instance
+    }
 }

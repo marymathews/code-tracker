@@ -5,7 +5,7 @@ import io.reactivex.disposables.Disposable
 import javax.inject.Inject
 
 class SplashScreenPresenter
-    @Inject constructor(private val view: SplashScreenView) {
+    @Inject constructor(private val view: SplashScreenView, private val model: SplashScreenModel) {
 
     fun onCreate() {
         val compositeDisposables = CompositeDisposable()
@@ -14,6 +14,7 @@ class SplashScreenPresenter
 
     private fun onSplashScreenTapped() : Disposable {
         return view.splashScreenTapped().subscribe {
+            model.navigateToSelectOption()
         }
     }
 }
