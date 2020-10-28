@@ -23,5 +23,6 @@ class SplashActivity : AppCompatActivity() {
         component.injectSplashActivity(this)
 
         setContentView(view)
+        presenter.onCreate()
     }
 }
