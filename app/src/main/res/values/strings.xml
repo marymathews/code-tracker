@@ -3,4 +3,11 @@
     <string name="welcome">Welcome to Code Tracker!</string>
     <string name="start_tracking_your_code">Tap anywhere to get started with an efficient code tracking experience</string>
     <string name="image">Image</string>
+    <string name="enter_details">Enter Details</string>
+    <string name="view_insights">View Insights</string>
+    <string name="start_timer">Start Timer</string>
+    <string name="select_option">What would you like to do today?</string>
+    <string name="enter_details_desc">You can enter all the details of your coding practice session here; Time and space complexity of your solution, duration of the session, the problem description, a link to the problem, and a lot more data!</string>
+    <string name="view_insights_desc">View insights compiled from all your recorded sessions.</string>
+    <string name="start_timer_desc">Time yourself during a practice session. The timer cannot be paused, only stopped. Just like in a real coding assessment.</string>
 </resources>

@@ -8,7 +8,7 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-class SelectionOptionModule(private val activity: AppCompatActivity) {
+class SelectOptionModule(private val activity: AppCompatActivity) {
 
     @Provides
     @SelectOptionScope

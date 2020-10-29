@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="margin_16_dp">16dp</dimen>
+    <dimen name="button_corner_radius_4_dp">4dp</dimen>
+    <dimen name="margin_32_dp">32dp</dimen>
+    <dimen name="divider_height_1_dp">1dp</dimen>
 
     <dimen name="large_text_18_sp">18sp</dimen>
     <dimen name="x_large_text_20_sp">20sp</dimen>
+    <dimen name="button_text_16_sp">16sp</dimen>
+    <dimen name="medium_text_14_sp">14sp</dimen>
+    <dimen name="medium_large_text_16sp">16sp</dimen>
+    <dimen name="small_text_12_sp">12sp</dimen>
 </resources>

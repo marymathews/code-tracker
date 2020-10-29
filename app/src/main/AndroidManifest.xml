@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".modules.selectOption.SelectOptionActivity" />
+        <activity android:name=".modules.selectOption.SelectOptionActivity" android:screenOrientation="portrait" />
 
     </application>
 
