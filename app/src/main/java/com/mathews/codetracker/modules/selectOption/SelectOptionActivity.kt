@@ -35,5 +35,6 @@ class SelectOptionActivity : AppCompatActivity() {
         component.injectSelectOptionActivity(this)
 
         setContentView(view)
+        presenter.onCreate()
     }
 }

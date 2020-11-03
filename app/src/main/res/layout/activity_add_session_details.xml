@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="wrap_content"
+  android:layout_width="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <androidx.cardview.widget.CardView
+      android:id="@+id/cv_header"
+      app:layout_constraintTop_toTopOf="parent"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" >
+
+      <TextView
+        android:id="@+id/tv_header_select_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_session_details"
+        android:fontFamily="@font/sharp_sans_no1_semibold"
+        android:textSize="@dimen/large_text_18_sp"
+        android:textAlignment="center"
+        android:layout_margin="@dimen/margin_16_dp"
+        />
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+      android:id="@+id/divider"
+      app:layout_constraintTop_toBottomOf="@id/cv_header"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/divider_height_1_dp"
+      android:background="@color/colorPrimaryDark" />
+
+    <EditText
+      android:id="@+id/et_problem_title"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/margin_16_dp"
+      android:padding="@dimen/edit_text_padding_10_dp"
+      android:background="@drawable/edit_text_background"
+      app:layout_constraintTop_toBottomOf="@id/divider"
+      android:fontFamily="@font/sharp_sans_no1_medium"
+      android:inputType="text"
+      android:autofillHints="@string/enter_problem_title"
+      android:hint="@string/enter_problem_title" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
