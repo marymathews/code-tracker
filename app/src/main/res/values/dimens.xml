@@ -6,6 +6,7 @@
     <dimen name="divider_height_1_dp">1dp</dimen>
     <dimen name="stroke_width_2_dp">2dp</dimen>
     <dimen name="edit_text_padding_10_dp">10dp</dimen>
+    <dimen name="et_elevation_4_dp">4dp</dimen>
 
     <dimen name="large_text_18_sp">18sp</dimen>
     <dimen name="x_large_text_20_sp">20sp</dimen>

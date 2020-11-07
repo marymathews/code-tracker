@@ -45,8 +45,149 @@
       app:layout_constraintTop_toBottomOf="@id/divider"
       android:fontFamily="@font/sharp_sans_no1_medium"
       android:inputType="text"
+      android:elevation="@dimen/et_elevation_4_dp"
       android:autofillHints="@string/enter_problem_title"
       android:hint="@string/enter_problem_title" />
+
+    <EditText
+      android:id="@+id/et_problem_desc"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/margin_16_dp"
+      android:padding="@dimen/edit_text_padding_10_dp"
+      android:background="@drawable/edit_text_background"
+      app:layout_constraintTop_toBottomOf="@id/et_problem_title"
+      android:fontFamily="@font/sharp_sans_no1_medium"
+      android:inputType="text"
+      android:elevation="@dimen/et_elevation_4_dp"
+      android:autofillHints="@string/enter_problem_desc"
+      android:hint="@string/enter_problem_desc" />
+
+    <EditText
+      android:id="@+id/et_problem_site"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/margin_16_dp"
+      android:padding="@dimen/edit_text_padding_10_dp"
+      android:background="@drawable/edit_text_background"
+      app:layout_constraintTop_toBottomOf="@id/et_problem_desc"
+      android:fontFamily="@font/sharp_sans_no1_medium"
+      android:inputType="text"
+      android:elevation="@dimen/et_elevation_4_dp"
+      android:autofillHints="@string/enter_problem_site"
+      android:hint="@string/enter_problem_site" />
+
+    <EditText
+      android:id="@+id/et_problem_link"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/margin_16_dp"
+      android:padding="@dimen/edit_text_padding_10_dp"
+      android:background="@drawable/edit_text_background"
+      app:layout_constraintTop_toBottomOf="@id/et_problem_site"
+      android:fontFamily="@font/sharp_sans_no1_medium"
+      android:inputType="textUri"
+      android:elevation="@dimen/et_elevation_4_dp"
+      android:autofillHints="@string/enter_problem_link"
+      android:hint="@string/enter_problem_link" />
+
+    <EditText
+      android:id="@+id/et_problem_level"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/margin_16_dp"
+      android:padding="@dimen/edit_text_padding_10_dp"
+      android:background="@drawable/edit_text_background"
+      app:layout_constraintTop_toBottomOf="@id/et_problem_link"
+      android:fontFamily="@font/sharp_sans_no1_medium"
+      android:inputType="text"
+      android:elevation="@dimen/et_elevation_4_dp"
+      android:autofillHints="@string/enter_problem_level"
+      android:hint="@string/enter_problem_level" />
+
+    <EditText
+      android:id="@+id/et_solution_desc"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/margin_16_dp"
+      android:padding="@dimen/edit_text_padding_10_dp"
+      android:background="@drawable/edit_text_background"
+      app:layout_constraintTop_toBottomOf="@id/et_problem_level"
+      android:fontFamily="@font/sharp_sans_no1_medium"
+      android:inputType="text"
+      android:elevation="@dimen/et_elevation_4_dp"
+      android:autofillHints="@string/enter_solution_desc"
+      android:hint="@string/enter_solution_desc" />
+
+    <EditText
+      android:id="@+id/et_solution_time_complexity"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/margin_16_dp"
+      android:padding="@dimen/edit_text_padding_10_dp"
+      android:background="@drawable/edit_text_background"
+      app:layout_constraintTop_toBottomOf="@id/et_solution_desc"
+      android:fontFamily="@font/sharp_sans_no1_medium"
+      android:inputType="text"
+      android:elevation="@dimen/et_elevation_4_dp"
+      android:autofillHints="@string/enter_solution_time_complexity"
+      android:hint="@string/enter_solution_time_complexity" />
+
+    <EditText
+      android:id="@+id/et_solution_space_complexity"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/margin_16_dp"
+      android:padding="@dimen/edit_text_padding_10_dp"
+      android:background="@drawable/edit_text_background"
+      app:layout_constraintTop_toBottomOf="@id/et_solution_time_complexity"
+      android:fontFamily="@font/sharp_sans_no1_medium"
+      android:inputType="text"
+      android:elevation="@dimen/et_elevation_4_dp"
+      android:autofillHints="@string/enter_solution_space_complexity"
+      android:hint="@string/enter_solution_space_complexity" />
+
+    <EditText
+      android:id="@+id/et_solution_date"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/margin_16_dp"
+      android:padding="@dimen/edit_text_padding_10_dp"
+      android:background="@drawable/edit_text_background"
+      app:layout_constraintTop_toBottomOf="@id/et_solution_space_complexity"
+      android:fontFamily="@font/sharp_sans_no1_medium"
+      android:inputType="date"
+      android:elevation="@dimen/et_elevation_4_dp"
+      android:autofillHints="@string/enter_solution_date"
+      android:hint="@string/enter_solution_date" />
+
+    <EditText
+      android:id="@+id/et_solution_time"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/margin_16_dp"
+      android:padding="@dimen/edit_text_padding_10_dp"
+      android:background="@drawable/edit_text_background"
+      app:layout_constraintTop_toBottomOf="@id/et_solution_date"
+      android:fontFamily="@font/sharp_sans_no1_medium"
+      android:inputType="number"
+      android:elevation="@dimen/et_elevation_4_dp"
+      android:autofillHints="@string/enter_solution_time"
+      android:hint="@string/enter_solution_time" />
+
+    <Button
+      android:id="@+id/btn_save"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/margin_16_dp"
+      android:padding="@dimen/margin_16_dp"
+      android:background="@drawable/button_states"
+      app:layout_constraintTop_toBottomOf="@id/et_solution_time"
+      app:layout_constraintBottom_toBottomOf="parent"
+      android:layout_marginBottom="@dimen/margin_16_dp"
+      android:text="@string/save_data"
+      android:textSize="@dimen/button_text_16_sp"
+      android:fontFamily="@font/sharp_sans_no1_bold" />
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 

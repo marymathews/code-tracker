@@ -12,4 +12,15 @@
     <string name="start_timer_desc">Time yourself during a practice session. The timer cannot be paused, only stopped. Just like in a real coding assessment.</string>
     <string name="enter_session_details">Enter Session Details</string>
     <string name="enter_problem_title">What\'s the problem title?</string>
+    <string name="enter_problem_desc">Describe the problem here</string>
+    <string name="enter_problem_site">On which site did you find this problem? Leetcode, TopCoder …</string>
+    <string name="enter_problem_link">You can add a link to the problem/site here</string>
+    <string name="enter_problem_level">Was the problem Easy, Medium, or Difficult?</string>
+    <string name="enter_solution_desc">You can explain your solution here</string>
+    <string name="enter_solution_time_complexity">What was the time complexity of your solution?</string>
+    <string name="enter_solution_space_complexity">What was the space complexity of your solution?</string>
+    <string name="enter_solution_date">When did you solve or attempt this problem?</string>
+    <string name="enter_solution_time">How long did this take you to solve? (In minutes)</string>
+    <string name="save_data">Save</string>
+
 </resources>
