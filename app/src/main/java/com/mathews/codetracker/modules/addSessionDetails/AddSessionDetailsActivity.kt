@@ -35,4 +35,8 @@ class AddSessionDetailsActivity : AppCompatActivity() {
 
         setContentView(view)
     }
+
+    override fun onBackPressed() {
+        presenter.onBackPressed()
+    }
 }
