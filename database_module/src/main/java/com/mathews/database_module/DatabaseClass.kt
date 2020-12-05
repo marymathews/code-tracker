@@ -1,13 +1,15 @@
 package com.mathews.database_module
 
 import android.content.Context
-import androidx.room.DatabaseConfiguration
-import androidx.room.InvalidationTracker
-import androidx.room.Room
-import androidx.room.RoomDatabase
+import androidx.room.*
 import androidx.sqlite.db.SupportSQLiteOpenHelper
+import com.mathews.database_module.dao.SessionDao
+import com.mathews.database_module.entities.SessionEntity
 
+@Database(entities = [SessionEntity::class], version = 1)
 abstract class DatabaseClass : RoomDatabase() {
+
+    abstract fun sessionDao() : SessionDao
 
     companion object {
         private val sLock = Any()

@@ -6,7 +6,7 @@ import com.mathews.database_module.DatabaseClass
 import javax.inject.Inject
 
 class AddSessionDetailsModel
-@Inject constructor(val activity: AppCompatActivity) {
+@Inject constructor(val activity: AppCompatActivity, val database: DatabaseClass) {
 
     fun onBackPressed() {
         activity.finish()

@@ -25,7 +25,7 @@ class AddSessionDetailsModule(val activity: AppCompatActivity) {
 
     @Provides
     @AddSessionDetailsScope
-    fun addSessionDetailsModel() : AddSessionDetailsModel {
-        return AddSessionDetailsModel(activity)
+    fun addSessionDetailsModel(database : DatabaseClass) : AddSessionDetailsModel {
+        return AddSessionDetailsModel(activity, database)
     }
 }
