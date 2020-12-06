@@ -34,6 +34,7 @@ class AddSessionDetailsActivity : AppCompatActivity() {
         component.injectAddSessionDetailsActivity(this)
 
         setContentView(view)
+        presenter.onCreate()
     }
 
     override fun onBackPressed() {

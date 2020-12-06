@@ -33,5 +33,6 @@
     <string name="solution_time_hint">Example: 60</string>
     <string name="save_data">Save</string>
     <string name="required_questions">* indicates required questions</string>
+    <string name="data_validation_error">Please check the data entered in the required fields</string>
 
 </resources>

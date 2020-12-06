@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.mathews.codetracker.modules.addSessionDetails.mvp.AddSessionDetailsModel
 import com.mathews.codetracker.modules.addSessionDetails.mvp.AddSessionDetailsPresenter
 import com.mathews.codetracker.modules.addSessionDetails.mvp.AddSessionDetailsView
+import com.mathews.codetracker.modules.addSessionDetails.mvp.AddSessionDetailsViewState
 import com.mathews.database_module.DatabaseClass
 import dagger.Module
 import dagger.Provides
@@ -19,8 +20,8 @@ class AddSessionDetailsModule(val activity: AppCompatActivity) {
 
     @Provides
     @AddSessionDetailsScope
-    fun addSessionDetailsView() : AddSessionDetailsView {
-        return AddSessionDetailsView(activity)
+    fun addSessionDetailsView(state: AddSessionDetailsViewState) : AddSessionDetailsView {
+        return AddSessionDetailsView(activity, state)
     }
 
     @Provides
