@@ -351,6 +351,30 @@
       android:textSize="@dimen/button_text_16_sp"
       android:fontFamily="@font/sharp_sans_no1_bold" />
 
+    <androidx.constraintlayout.widget.Group
+      android:visibility="visible"
+      android:id="@+id/grp_session_details_form"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:constraint_referenced_ids="btn_save,et_problem_desc,et_problem_level,et_problem_link,et_problem_site,et_problem_title,et_solution_date,et_solution_desc,et_solution_space_complexity,et_solution_time,et_solution_time_complexity,tv_problem_desc,tv_problem_level,tv_problem_link,tv_problem_site,tv_problem_title,tv_solution_date,tv_solution_desc,tv_required_questions,tv_solution_time_complexity,tv_solution_time,tv_solution_space_complexity" />
+
+    <TextView
+      android:visibility="gone"
+      android:id="@+id/tv_final_message"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginVertical="@dimen/margin_16_dp"
+      android:fontFamily="@font/sharp_sans_no1_bold"
+      android:gravity="center"
+      android:textSize="@dimen/x_large_text_20_sp"
+      android:text="@string/success_data_saved"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/divider"
+      android:drawablePadding="@dimen/margin_8_dp"
+      app:drawableTopCompat="@drawable/icn_success" />
+
   </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

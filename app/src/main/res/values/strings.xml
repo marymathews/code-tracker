@@ -34,5 +34,7 @@
     <string name="save_data">Save</string>
     <string name="required_questions">* indicates required questions</string>
     <string name="data_validation_error">Please check the data entered in the required fields</string>
+    <string name="success_data_saved">All done! \n Your session data was saved successfully.</string>
+    <string name="failure_data_saved">Uh Oh! \n Looks like something went wrong. Please try again later.</string>
 
 </resources>

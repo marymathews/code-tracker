@@ -44,4 +44,16 @@ class AddSessionDetailsView
         text.typeface =  ResourcesCompat.getFont(context, R.font.sharp_sans_no1_medium)
         snackbar.show()
     }
+
+    fun showSuccessOrFailure(isSuccess : Boolean) {
+        grp_session_details_form.visibility = View.GONE
+        if(isSuccess) {
+            tv_final_message.text = activity.getString(R.string.success_data_saved)
+            tv_final_message.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.icn_success, 0,0)
+        } else {
+            tv_final_message.text = activity.getString(R.string.failure_data_saved)
+            tv_final_message.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.icn_failure, 0,0)
+        }
+        tv_final_message.visibility = View.VISIBLE
+    }
 }

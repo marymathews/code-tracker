@@ -6,9 +6,6 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "sessions")
 data class SessionEntity(
-    @PrimaryKey(autoGenerate = true)
-    var id : Long,
-
     var title : String,
 
     @ColumnInfo(name = "problem_description")
@@ -32,4 +29,7 @@ data class SessionEntity(
     var date : String,
 
     var time : String
-)
+) {
+    @PrimaryKey(autoGenerate = true)
+    var id : Long = 0L
+}

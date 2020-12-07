@@ -9,6 +9,7 @@ import com.mathews.codetracker.modules.addSessionDetails.di.AddSessionDetailsMod
 import com.mathews.codetracker.modules.addSessionDetails.di.DaggerAddSessionDetailsComponent
 import com.mathews.codetracker.modules.addSessionDetails.mvp.AddSessionDetailsPresenter
 import com.mathews.codetracker.modules.addSessionDetails.mvp.AddSessionDetailsView
+import kotlinx.coroutines.MainScope
 import javax.inject.Inject
 
 class AddSessionDetailsActivity : AppCompatActivity() {
@@ -34,10 +35,15 @@ class AddSessionDetailsActivity : AppCompatActivity() {
         component.injectAddSessionDetailsActivity(this)
 
         setContentView(view)
-        presenter.onCreate()
+        presenter.onCreate(MainScope())
     }
 
     override fun onBackPressed() {
         presenter.onBackPressed()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        presenter.onDestroy()
     }
 }

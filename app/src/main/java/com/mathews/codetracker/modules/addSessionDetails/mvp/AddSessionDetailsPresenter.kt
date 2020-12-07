@@ -1,8 +1,13 @@
 package com.mathews.codetracker.modules.addSessionDetails.mvp
 
 import com.mathews.codetracker.app.AppConstants
+import com.mathews.database_module.entities.SessionEntity
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.cancel
+import kotlinx.coroutines.launch
 import org.joda.time.format.DateTimeFormat
 import java.lang.Exception
 import javax.inject.Inject
@@ -12,16 +17,31 @@ class AddSessionDetailsPresenter
 
     private val compositeDisposables = CompositeDisposable()
     private val dateFormatter = DateTimeFormat.forPattern(AppConstants.dateFormat)
+    private lateinit var scope : CoroutineScope
 
-    fun onCreate() {
+    fun onCreate(scope: CoroutineScope) {
+        this.scope = scope
         compositeDisposables.add(onSaveClickedObservable())
     }
 
     fun onBackPressed() {
         model.onBackPressed()
+        cancelScope()
     }
 
-    private fun onSaveClickedObservable() : Disposable {
+    fun onDestroy() {
+        cancelScope()
+    }
+
+    private fun cancelScope() {
+        try {
+            scope.cancel()
+        } catch (e : Exception) {
+            e.printStackTrace()
+        }
+    }
+
+    private fun onSaveClickedObservable(): Disposable {
         return view.onSaveClickedObservable().subscribe {
             view.saveDataIntoViewState()
             validateData()
@@ -29,7 +49,7 @@ class AddSessionDetailsPresenter
     }
 
     private fun validateData() {
-        if(!view.state.isDataProcessingInProgress) {
+        if (!view.state.isDataProcessingInProgress) {
             view.state.isDataProcessingInProgress = true
             if (validateRequiredField(view.state.problemTitle)
                 && validateRequiredField(view.state.site)
@@ -37,11 +57,38 @@ class AddSessionDetailsPresenter
                 && validateDateTime(view.state.date)
                 && validateTime(view.state.time)
             ) {
-                //todo save data into db then set isDataProcessingInProgress to false
+                saveSessionInDb()
             } else {
                 view.state.isDataProcessingInProgress = false
                 view.showDataValidationError()
             }
+        }
+    }
+
+    private fun saveSessionInDb() {
+        val entity = SessionEntity(
+            view.state.problemTitle ?: "",
+            view.state.problemDescription,
+            view.state.site ?: "",
+            view.state.link,
+            view.state.level ?: "",
+            view.state.solutionDescription,
+            view.state.timeComplexity,
+            view.state.spaceComplexity,
+            view.state.date ?: "",
+            view.state.time ?: ""
+        )
+
+        scope.launch(Dispatchers.IO) {
+            val isInsertSuccessful = model.insertEntity(entity)
+            showMessage(isInsertSuccessful)
+            view.state.isDataProcessingInProgress = false
+        }
+    }
+
+    private fun showMessage(isSuccessful : Boolean) {
+        scope.launch(Dispatchers.Main) {
+            view.showSuccessOrFailure(isSuccessful)
         }
     }
 
