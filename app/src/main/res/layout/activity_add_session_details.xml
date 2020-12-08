@@ -367,13 +367,14 @@
       android:fontFamily="@font/sharp_sans_no1_bold"
       android:gravity="center"
       android:textSize="@dimen/x_large_text_20_sp"
-      android:text="@string/success_data_saved"
+      android:text="@string/failure_data_saved"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@id/divider"
+      android:padding="@dimen/margin_8_dp"
       android:drawablePadding="@dimen/margin_8_dp"
-      app:drawableTopCompat="@drawable/icn_success" />
+      app:drawableTopCompat="@drawable/icn_failure" />
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 
