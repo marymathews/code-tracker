@@ -23,6 +23,8 @@
 
         <activity android:name=".modules.addSessionDetails.AddSessionDetailsActivity" android:screenOrientation="portrait" />
 
+        <activity android:name=".modules.viewSessionList.ViewSessionListActivity" android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

@@ -31,6 +31,7 @@ class AddSessionDetailsPresenter
 
     fun onDestroy() {
         cancelScope()
+        compositeDisposables.clear()
     }
 
     private fun cancelScope() {

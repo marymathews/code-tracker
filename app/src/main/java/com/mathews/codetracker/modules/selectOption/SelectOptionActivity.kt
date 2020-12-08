@@ -37,4 +37,9 @@ class SelectOptionActivity : AppCompatActivity() {
         setContentView(view)
         presenter.onCreate()
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        presenter.onDestroy()
+    }
 }

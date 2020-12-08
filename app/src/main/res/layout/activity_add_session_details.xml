@@ -71,7 +71,7 @@
       android:background="@drawable/edit_text_background"
       app:layout_constraintTop_toBottomOf="@id/tv_problem_title"
       android:fontFamily="@font/sharp_sans_no1_medium"
-      android:inputType="text"
+      android:inputType="textCapWords"
       android:elevation="@dimen/et_elevation_4_dp"
       android:autofillHints="@string/problem_hint"
       android:hint="@string/problem_hint" />
@@ -100,7 +100,7 @@
       android:background="@drawable/edit_text_background"
       app:layout_constraintTop_toBottomOf="@id/tv_problem_desc"
       android:fontFamily="@font/sharp_sans_no1_medium"
-      android:inputType="text"
+      android:inputType="textCapSentences"
       android:elevation="@dimen/et_elevation_4_dp"
       android:autofillHints="@string/problem_desc_hint"
       android:hint="@string/problem_desc_hint" />
@@ -129,7 +129,7 @@
       android:background="@drawable/edit_text_background"
       app:layout_constraintTop_toBottomOf="@id/tv_problem_site"
       android:fontFamily="@font/sharp_sans_no1_medium"
-      android:inputType="text"
+      android:inputType="textCapWords"
       android:elevation="@dimen/et_elevation_4_dp"
       android:autofillHints="@string/problem_site_hint"
       android:hint="@string/problem_site_hint" />
@@ -187,7 +187,7 @@
       android:background="@drawable/edit_text_background"
       app:layout_constraintTop_toBottomOf="@id/tv_problem_level"
       android:fontFamily="@font/sharp_sans_no1_medium"
-      android:inputType="text"
+      android:inputType="textCapWords"
       android:elevation="@dimen/et_elevation_4_dp"
       android:autofillHints="@string/problem_level_hint"
       android:hint="@string/problem_level_hint" />
@@ -216,7 +216,7 @@
       android:background="@drawable/edit_text_background"
       app:layout_constraintTop_toBottomOf="@id/tv_solution_desc"
       android:fontFamily="@font/sharp_sans_no1_medium"
-      android:inputType="text"
+      android:inputType="textCapSentences"
       android:elevation="@dimen/et_elevation_4_dp"
       android:autofillHints="@string/solution_desc_hint"
       android:hint="@string/solution_desc_hint" />

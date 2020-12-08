@@ -7,8 +7,9 @@ import javax.inject.Inject
 class SplashScreenPresenter
     @Inject constructor(private val view: SplashScreenView, private val model: SplashScreenModel) {
 
+    private val compositeDisposables = CompositeDisposable()
+
     fun onCreate() {
-        val compositeDisposables = CompositeDisposable()
         compositeDisposables.add(onSplashScreenTapped())
     }
 
@@ -16,5 +17,9 @@ class SplashScreenPresenter
         return view.splashScreenTapped().subscribe {
             model.navigateToSelectOption()
         }
+    }
+
+    fun onDestroy() {
+        compositeDisposables.clear()
     }
 }

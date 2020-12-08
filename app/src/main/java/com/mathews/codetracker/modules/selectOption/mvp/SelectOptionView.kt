@@ -21,4 +21,8 @@ class SelectOptionView
     fun getEnterDetailsClickedObservable() : Observable<Any> {
         return RxView.clicks(btn_enter_details)
     }
+
+    fun getViewDetailsClickedObservable() : Observable<Any> {
+        return RxView.clicks(btn_view_details)
+    }
 }

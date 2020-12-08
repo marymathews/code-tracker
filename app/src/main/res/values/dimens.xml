@@ -9,6 +9,7 @@
     <dimen name="et_elevation_4_dp">4dp</dimen>
     <dimen name="margin_4_dp">4dp</dimen>
     <dimen name="margin_8_dp">8dp</dimen>
+    <dimen name="margin_6_dp">6dp</dimen>
 
     <dimen name="large_text_18_sp">18sp</dimen>
     <dimen name="x_large_text_20_sp">20sp</dimen>
