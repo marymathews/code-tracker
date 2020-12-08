@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView android:id="@+id/cv_session_item"
+<androidx.cardview.widget.CardView
+  android:id="@+id/cv_session_item"
   xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="match_parent"
   android:layout_height="wrap_content"
+  android:layout_marginVertical="@dimen/margin_8_dp"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools">
 
   <androidx.constraintlayout.widget.ConstraintLayout
+    android:padding="@dimen/margin_16_dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -14,7 +17,7 @@
       android:id="@+id/tv_title"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
-      tools:text="Add Two Numbers"
+      tools:text="2 Sum"
       android:fontFamily="@font/sharp_sans_no1_semibold"
       android:textColor="@color/black"
       android:textSize="@dimen/x_large_text_20_sp"
@@ -30,7 +33,7 @@
       android:id="@+id/tv_site"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      tools:text="Leetcode \t"
+      tools:text="CodeSignal \t"
       android:fontFamily="@font/sharp_sans_no1_medium"
       android:textSize="@dimen/medium_large_text_16sp"
       android:layout_marginTop="@dimen/margin_6_dp"

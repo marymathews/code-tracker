@@ -9,6 +9,7 @@ import com.mathews.codetracker.modules.viewSessionList.di.DaggerViewSessionListC
 import com.mathews.codetracker.modules.viewSessionList.di.ViewSessionListModule
 import com.mathews.codetracker.modules.viewSessionList.mvp.ViewSessionListPresenter
 import com.mathews.codetracker.modules.viewSessionList.mvp.ViewSessionListView
+import kotlinx.coroutines.MainScope
 import javax.inject.Inject
 
 class ViewSessionListActivity : AppCompatActivity() {
@@ -26,10 +27,16 @@ class ViewSessionListActivity : AppCompatActivity() {
         component.injectViewSessionListActivity(this)
 
         setContentView(view)
+        presenter.onCreate(MainScope())
     }
 
     override fun onBackPressed() {
         presenter.onBackPressed()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        presenter.onDestroy()
     }
 
     companion object {

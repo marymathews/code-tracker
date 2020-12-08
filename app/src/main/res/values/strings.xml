@@ -37,5 +37,8 @@
     <string name="success_data_saved">All done! \n Your session data was saved successfully.</string>
     <string name="failure_data_saved">Uh Oh! \n Looks like something went wrong. Please try again later.</string>
     <string name="view_sessions">View Saved Sessions</string>
+    <string name="no_sessions">You haven\'t saved any session data yet.</string>
+    <string name="session_view_site">%s \t\t</string>
+    <string name="session_view_date">\t %s</string>
 
 </resources>

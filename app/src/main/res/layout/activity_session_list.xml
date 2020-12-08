@@ -2,7 +2,7 @@
 <ScrollView
   android:layout_height="wrap_content"
   android:layout_width="match_parent"
-  android:scrollbars="none"
+  android:scrollbars="vertical"
   android:fillViewport="true"
   xmlns:android="http://schemas.android.com/apk/res/android" >
 
@@ -38,10 +38,25 @@
       android:background="@color/colorPrimaryDark"/>
 
     <androidx.recyclerview.widget.RecyclerView
+      android:visibility="visible"
+      android:id="@+id/rv_sessions"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       app:layout_constraintTop_toBottomOf="@id/divider"
       android:padding="@dimen/margin_16_dp" />
+
+    <TextView
+      android:visibility="gone"
+      android:id="@+id/tv_no_sessions"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/no_sessions"
+      android:fontFamily="@font/sharp_sans_no1_medium"
+      android:layout_marginTop="@dimen/margin_16_dp"
+      android:gravity="center"
+      app:layout_constraintTop_toBottomOf="@id/divider"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent" />
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 
