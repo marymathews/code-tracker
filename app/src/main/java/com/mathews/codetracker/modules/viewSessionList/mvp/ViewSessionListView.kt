@@ -8,9 +8,12 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.jakewharton.rxbinding2.view.RxView
 import com.mathews.codetracker.R
+import com.mathews.codetracker.app.BottomSheetDialog
 import io.reactivex.Observable
 import kotlinx.android.synthetic.main.activity_session_list.view.*
+import kotlinx.android.synthetic.main.item_dialog.view.*
 import javax.inject.Inject
 
 @SuppressLint("ViewConstructor")
@@ -40,5 +43,21 @@ class ViewSessionListView
 
     fun onDeleteClickedObservable() : Observable<Int> {
         return adapter.deleteClickedSubject
+    }
+
+    fun showDialog(dialogText : String, buttonText : String, icon : Int) {
+        val bottomSheetDialog = BottomSheetDialog(context)
+        val dialogView = View.inflate(context, R.layout.item_dialog, null)
+        bottomSheetDialog.setContentView(dialogView)
+
+        RxView.clicks(dialogView.btn_confirm).subscribe(state.onConfirmDeletionClickedObservable)
+        bottomSheetDialog.setOnDismissListener(state.onConfirmDeletionClickedObservable)
+        bottomSheetDialog.setCancelable(true)
+
+        dialogView.tv_dialog_title.text = dialogText
+        dialogView.btn_confirm.text = buttonText
+        dialogView.iv_dialog_icon.setImageResource(icon)
+
+        bottomSheetDialog.show()
     }
 }

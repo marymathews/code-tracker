@@ -1,5 +1,6 @@
 package com.mathews.codetracker.modules.viewSessionList.mvp
 
+import com.mathews.codetracker.R
 import com.mathews.codetracker.app.AppConstants
 import com.mathews.database_module.entities.SessionEntity
 import io.reactivex.disposables.CompositeDisposable
@@ -20,6 +21,7 @@ class ViewSessionListPresenter
 
     fun onCreate(scope: CoroutineScope) {
         compositeDisposables.add(onDeleteClickedObservable())
+        compositeDisposables.add(onConfirmDeleteClickedObservable())
         this.scope = scope
         view.initView()
         getSessionsFromDb()
@@ -34,8 +36,23 @@ class ViewSessionListPresenter
 
     private fun onDeleteClickedObservable() : Disposable {
         return view.onDeleteClickedObservable().subscribe {
-            if (it >= 0 && it < view.state.sessionsList.size)
-                deleteSession(it)
+            if (it >= 0 && it < view.state.sessionsList.size) {
+                view.state.selectedSessionId = it
+                view.showDialog(
+                    String.format(
+                        model.activity.getString(R.string.delete_session),
+                        view.state.sessionsList[it].title
+                    ),
+                    model.activity.getString(R.string.delete),
+                    R.drawable.icn_alert
+                )
+            }
+        }
+    }
+
+    private fun onConfirmDeleteClickedObservable() : Disposable {
+        return view.state.onConfirmDeletionClickedObservable.subscribe {
+            deleteSession(view.state.selectedSessionId)
         }
     }
 

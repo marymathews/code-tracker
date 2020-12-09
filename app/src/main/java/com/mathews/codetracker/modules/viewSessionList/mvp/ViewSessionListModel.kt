@@ -8,7 +8,7 @@ import java.lang.Exception
 import javax.inject.Inject
 
 class ViewSessionListModel
-@Inject constructor(private val activity: AppCompatActivity, private val databaseClass: DatabaseClass) {
+@Inject constructor(val activity: AppCompatActivity, private val databaseClass: DatabaseClass) {
 
     fun onBackPressed() {
         activity.finish()

@@ -40,5 +40,7 @@
     <string name="no_sessions">You haven\'t saved any session data yet.</string>
     <string name="session_view_site">%s \t\t</string>
     <string name="session_view_date">\t %s</string>
+    <string name="delete">Delete Session</string>
+    <string name="delete_session">Delete \'%s\' ?</string>
 
 </resources>
