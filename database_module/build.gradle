@@ -46,4 +46,7 @@ dependencies {
     implementation "androidx.room:room-ktx:2.2.5"
     implementation "androidx.room:room-migration:2.2.5"
     implementation "androidx.room:room-runtime:2.2.5"
+
+    //Date and Time
+    implementation 'joda-time:joda-time:2.10.8'
 }

@@ -1,10 +1,13 @@
 package com.mathews.codetracker.modules.viewSessionList.mvp
 
+import com.mathews.codetracker.app.AppConstants
+import com.mathews.database_module.entities.SessionEntity
 import io.reactivex.disposables.CompositeDisposable
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
+import org.joda.time.format.DateTimeFormat
 import java.lang.Exception
 import javax.inject.Inject
 
@@ -23,7 +26,7 @@ class ViewSessionListPresenter
     private fun getSessionsFromDb() {
         scope.launch(Dispatchers.IO) {
             view.state.sessionsList = ArrayList(model.fetchSessions())
-            displaySessions()
+            sortSessionsByDate()
         }
     }
 
@@ -31,6 +34,15 @@ class ViewSessionListPresenter
         scope.launch(Dispatchers.Main) {
             view.renderView()
         }
+    }
+
+    private fun sortSessionsByDate() {
+        val formatter = DateTimeFormat.forPattern(AppConstants.dateFormat)
+        for(session in view.state.sessionsList) {
+            session.dateInDateFormat = formatter.parseDateTime(session.date)
+        }
+        view.state.sessionsList.sortByDescending { it.dateInDateFormat }
+        displaySessions()
     }
 
     fun onDestroy() {

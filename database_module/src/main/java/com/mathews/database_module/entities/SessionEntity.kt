@@ -2,7 +2,9 @@ package com.mathews.database_module.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.Ignore
 import androidx.room.PrimaryKey
+import org.joda.time.DateTime
 
 @Entity(tableName = "sessions")
 data class SessionEntity(
@@ -32,4 +34,7 @@ data class SessionEntity(
 ) {
     @PrimaryKey(autoGenerate = true)
     var id : Long = 0L
+
+    @Ignore
+    var dateInDateFormat : DateTime? = null
 }

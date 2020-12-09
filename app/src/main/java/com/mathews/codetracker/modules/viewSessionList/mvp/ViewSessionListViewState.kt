@@ -5,5 +5,5 @@ import javax.inject.Inject
 
 class ViewSessionListViewState
 @Inject constructor() {
-    var sessionsList = ArrayList<SessionEntity>()
+    var sessionsList : ArrayList<SessionEntity> = ArrayList<SessionEntity>()
 }
