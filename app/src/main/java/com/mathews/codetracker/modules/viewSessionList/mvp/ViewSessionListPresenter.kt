@@ -3,6 +3,7 @@ package com.mathews.codetracker.modules.viewSessionList.mvp
 import com.mathews.codetracker.app.AppConstants
 import com.mathews.database_module.entities.SessionEntity
 import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.disposables.Disposable
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.cancel
@@ -18,6 +19,7 @@ class ViewSessionListPresenter
     private lateinit var scope: CoroutineScope
 
     fun onCreate(scope: CoroutineScope) {
+        compositeDisposables.add(onDeleteClickedObservable())
         this.scope = scope
         view.initView()
         getSessionsFromDb()
@@ -27,6 +29,20 @@ class ViewSessionListPresenter
         scope.launch(Dispatchers.IO) {
             view.state.sessionsList = ArrayList(model.fetchSessions())
             sortSessionsByDate()
+        }
+    }
+
+    private fun onDeleteClickedObservable() : Disposable {
+        return view.onDeleteClickedObservable().subscribe {
+            if (it >= 0 && it < view.state.sessionsList.size)
+                deleteSession(it)
+        }
+    }
+
+    private fun deleteSession(position : Int) {
+        scope.launch(Dispatchers.IO) {
+            model.deleteSession(view.state.sessionsList[position])
+            getSessionsFromDb()
         }
     }
 

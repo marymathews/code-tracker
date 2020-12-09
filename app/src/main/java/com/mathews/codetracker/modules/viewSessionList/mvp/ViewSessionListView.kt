@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.mathews.codetracker.R
+import io.reactivex.Observable
 import kotlinx.android.synthetic.main.activity_session_list.view.*
 import javax.inject.Inject
 
@@ -35,5 +36,9 @@ class ViewSessionListView
             rv_sessions.visibility = View.VISIBLE
             adapter.setData(state.sessionsList)
         }
+    }
+
+    fun onDeleteClickedObservable() : Observable<Int> {
+        return adapter.deleteClickedSubject
     }
 }

@@ -19,6 +19,7 @@ class ViewSessionListRecyclerAdapter
 
     private var sessionsList = ArrayList<SessionEntity>()
     var sessionClickedSubject = PublishSubject.create<Int>()
+    var deleteClickedSubject = PublishSubject.create<Int>()
 
     fun setData(sessionsList : ArrayList<SessionEntity>) {
         this.sessionsList = sessionsList
@@ -50,6 +51,12 @@ class ViewSessionListRecyclerAdapter
                     return@map adapterPosition
                 }
                 .subscribe(sessionClickedSubject)
+
+            RxView.clicks(view.iv_delete)
+                .map {
+                    return@map adapterPosition
+                }
+                .subscribe(deleteClickedSubject)
         }
 
         fun populateSessionData(session : SessionEntity) {

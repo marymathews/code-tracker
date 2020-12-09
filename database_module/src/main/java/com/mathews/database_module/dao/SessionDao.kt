@@ -1,6 +1,7 @@
 package com.mathews.database_module.dao
 
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import com.mathews.database_module.entities.SessionEntity
@@ -12,4 +13,7 @@ interface SessionDao {
 
     @Query("SELECT * FROM sessions")
     fun getAllSessions() : List<SessionEntity>
+
+    @Delete
+    fun deleteSession(sessionEntity : SessionEntity)
 }

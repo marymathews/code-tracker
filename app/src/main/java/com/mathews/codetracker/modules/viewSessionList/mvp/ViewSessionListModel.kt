@@ -19,7 +19,18 @@ class ViewSessionListModel
         return try {
             databaseClass.sessionDao().getAllSessions()
         } catch (e : Exception) {
+            e.printStackTrace()
             ArrayList<SessionEntity>()
         }
+    }
+
+    fun deleteSession(sessionEntity : SessionEntity) : Boolean {
+        try {
+            databaseClass.sessionDao().deleteSession(sessionEntity)
+        } catch (e : Exception) {
+            e.printStackTrace()
+            return false
+        }
+        return true
     }
 }
