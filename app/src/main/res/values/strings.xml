@@ -47,6 +47,6 @@
     <string name="solution">Solution: %s</string>
     <string name="space">%s space complexity</string>
     <string name="time">%s time complexity</string>
-    <string name="database_error">Something\s not right! Please try again later.</string>
+    <string name="database_error">Something\'s not right! Please try again later.</string>
 
 </resources>

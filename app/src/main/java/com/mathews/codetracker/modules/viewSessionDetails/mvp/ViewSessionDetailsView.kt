@@ -64,6 +64,10 @@ class ViewSessionDetailsView
         }
     }
 
+    fun onLinkClickedObservable() : Observable<Any> {
+        return RxView.clicks(tv_link)
+    }
+
     fun showError() {
         val snackbar = Snackbar.make(this, activity.getText(R.string.database_error), Snackbar.LENGTH_LONG)
         val text = snackbar.view.findViewById<TextView>(com.google.android.material.R.id.snackbar_text) as TextView

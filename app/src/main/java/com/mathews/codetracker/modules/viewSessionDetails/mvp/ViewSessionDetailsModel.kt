@@ -1,5 +1,7 @@
 package com.mathews.codetracker.modules.viewSessionDetails.mvp
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import com.mathews.codetracker.R
 import com.mathews.codetracker.modules.addSessionDetails.AddSessionDetailsActivity
@@ -21,7 +23,23 @@ class ViewSessionDetailsModel
         return try {
             database.sessionDao().getSessionById(sessionId)
         } catch (e : Exception) {
+            e.printStackTrace()
             null
         }
+    }
+
+    fun openLink(link : String) : Boolean {
+        try {
+            val url: Uri = Uri.parse(link)
+            val intent = Intent(Intent.ACTION_VIEW, url)
+            if (intent.resolveActivity(activity.packageManager) != null)
+                activity.startActivity(intent)
+            else
+                return false
+        } catch (e : Exception) {
+            e.printStackTrace()
+            return false
+        }
+        return true
     }
 }

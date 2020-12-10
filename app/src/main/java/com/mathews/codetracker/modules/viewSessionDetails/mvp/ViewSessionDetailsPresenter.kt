@@ -16,6 +16,7 @@ class ViewSessionDetailsPresenter
     private lateinit var scope : CoroutineScope
 
     fun onCreate(scope : CoroutineScope, sessionId : Long) {
+        compositeDisposables.add(onLinkClickedObservable())
         this.scope = scope
         view.state.sessionId = sessionId
         fetchSession()
@@ -42,6 +43,14 @@ class ViewSessionDetailsPresenter
     private fun showError() {
         scope.launch(Dispatchers.Main) {
             view.showError()
+        }
+    }
+
+    private fun onLinkClickedObservable() : Disposable {
+        return view.onLinkClickedObservable().subscribe {
+            if(view.state.session.link?.let { it1 -> model.openLink(it1) } == false) {
+                view.showError()
+            }
         }
     }
 
