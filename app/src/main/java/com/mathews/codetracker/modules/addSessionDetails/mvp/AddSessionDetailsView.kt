@@ -27,7 +27,7 @@ class AddSessionDetailsView
 
     fun saveDataIntoViewState() {
         state.problemTitle = et_problem_title.text.toString()
-        state.problemDescription = et_problem_level.text.toString()
+        state.problemDescription = et_problem_desc.text.toString()
         state.site = et_problem_site.text.toString()
         state.link = et_problem_link.text.toString()
         state.level = et_problem_level.text.toString()

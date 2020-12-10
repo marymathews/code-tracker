@@ -44,8 +44,9 @@
     <string name="delete_session">Delete \'%s\' ?</string>
     <string name="time_taken">%s minutes</string>
     <string name="problem">Question: %s</string>
-    <string name="solution">Solution: %</string>
+    <string name="solution">Solution: %s</string>
     <string name="space">%s space complexity</string>
     <string name="time">%s time complexity</string>
+    <string name="database_error">Something\s not right! Please try again later.</string>
 
 </resources>

@@ -45,6 +45,10 @@ class ViewSessionListView
         return adapter.deleteClickedSubject
     }
 
+    fun onSessionCardClickedObservable() : Observable<Int> {
+        return adapter.sessionClickedSubject
+    }
+
     fun showDialog(dialogText : String, buttonText : String, icon : Int) {
         val bottomSheetDialog = BottomSheetDialog(context)
         val dialogView = View.inflate(context, R.layout.item_dialog, null)

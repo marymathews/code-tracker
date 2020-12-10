@@ -2,6 +2,7 @@ package com.mathews.codetracker.modules.viewSessionList.mvp
 
 import androidx.appcompat.app.AppCompatActivity
 import com.mathews.codetracker.R
+import com.mathews.codetracker.modules.viewSessionDetails.ViewSessionDetailsActivity
 import com.mathews.database_module.DatabaseClass
 import com.mathews.database_module.entities.SessionEntity
 import java.lang.Exception
@@ -32,5 +33,9 @@ class ViewSessionListModel
             return false
         }
         return true
+    }
+
+    fun navigateToSessionDetailsScreen(sessionId : Long) {
+        ViewSessionDetailsActivity.start(activity, sessionId)
     }
 }

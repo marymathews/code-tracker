@@ -22,6 +22,7 @@ class ViewSessionListPresenter
     fun onCreate(scope: CoroutineScope) {
         compositeDisposables.add(onDeleteClickedObservable())
         compositeDisposables.add(onConfirmDeleteClickedObservable())
+        compositeDisposables.add(onSessionCardClickedObservable())
         this.scope = scope
         view.initView()
         getSessionsFromDb()
@@ -76,6 +77,14 @@ class ViewSessionListPresenter
         }
         view.state.sessionsList.sortByDescending { it.dateInDateFormat }
         displaySessions()
+    }
+
+    private fun onSessionCardClickedObservable() : Disposable {
+        return view.onSessionCardClickedObservable().subscribe {
+            if(it >= 0 && it < view.state.sessionsList.size) {
+                model.navigateToSessionDetailsScreen(view.state.sessionsList[it].id)
+            }
+        }
     }
 
     fun onDestroy() {

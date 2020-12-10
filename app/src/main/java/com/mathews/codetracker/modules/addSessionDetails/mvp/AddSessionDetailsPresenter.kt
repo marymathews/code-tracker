@@ -25,8 +25,8 @@ class AddSessionDetailsPresenter
     }
 
     fun onBackPressed() {
-        model.onBackPressed()
         cancelScope()
+        model.onBackPressed()
     }
 
     fun onDestroy() {
