@@ -21,7 +21,6 @@ class ViewSessionDetailsActivity : AppCompatActivity() {
             intent.putExtra(AppConstants.SESSION_ID, sessionId)
             activity.startActivity(intent)
             activity.overridePendingTransition(R.anim.slide_in_new, R.anim.slide_out_old)
-            activity.finish()
         }
     }
 
