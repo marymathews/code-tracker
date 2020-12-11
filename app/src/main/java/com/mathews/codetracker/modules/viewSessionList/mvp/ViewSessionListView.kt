@@ -4,10 +4,7 @@ import android.annotation.SuppressLint
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.jakewharton.rxbinding2.view.RxView
 import com.mathews.codetracker.R
 import com.mathews.codetracker.app.BottomSheetDialog

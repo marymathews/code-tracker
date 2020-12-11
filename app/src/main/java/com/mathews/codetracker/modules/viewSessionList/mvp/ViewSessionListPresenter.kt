@@ -2,7 +2,6 @@ package com.mathews.codetracker.modules.viewSessionList.mvp
 
 import com.mathews.codetracker.R
 import com.mathews.codetracker.app.AppConstants
-import com.mathews.database_module.entities.SessionEntity
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 import kotlinx.coroutines.CoroutineScope

@@ -4,8 +4,6 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import com.mathews.codetracker.R
-import com.mathews.codetracker.modules.addSessionDetails.AddSessionDetailsActivity
-import com.mathews.codetracker.modules.viewSessionList.ViewSessionListActivity
 import com.mathews.database_module.DatabaseClass
 import com.mathews.database_module.entities.SessionEntity
 import java.lang.Exception

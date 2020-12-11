@@ -1,6 +1,5 @@
 package com.mathews.codetracker.modules.splash.di
 
-import com.mathews.codetracker.app.di.ApplicationComponent
 import com.mathews.codetracker.modules.splash.SplashActivity
 import dagger.Component
 
