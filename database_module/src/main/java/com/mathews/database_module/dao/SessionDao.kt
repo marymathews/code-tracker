@@ -19,4 +19,25 @@ interface SessionDao {
 
     @Query("SELECT * FROM sessions where id = :sessionId")
     fun getSessionById(sessionId : Long) : SessionEntity
+
+    @Query("SELECT DISTINCT level FROM sessions")
+    fun getDistinctLevels() : List<String>
+
+    @Query("SELECT COUNT(*) FROM sessions WHERE level = :sessionLevel")
+    fun getCountOfEachLevel(sessionLevel : String) : Long
+
+    @Query("SELECT AVG(time) FROM sessions WHERE level = :sessionLevel")
+    fun getAverageTimeForEachLevel(sessionLevel: String) : Double
+
+    @Query("SELECT DISTINCT site FROM sessions")
+    fun getDistinctSites() : List<String>
+
+    @Query("SELECT COUNT(*) FROM sessions WHERE site = :sessionSite")
+    fun getCountOfEachSite(sessionSite : String) : Long
+
+    @Query("SELECT COUNT(DISTINCT(date)) FROM sessions")
+    fun getTotalNumberOfDates() : Long
+
+    @Query("SELECT COUNT(*) FROM sessions")
+    fun getTotalNumberOfSessions() : Long
 }

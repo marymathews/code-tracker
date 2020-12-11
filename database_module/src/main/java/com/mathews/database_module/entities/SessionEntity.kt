@@ -30,7 +30,7 @@ data class SessionEntity(
 
     var date : String,
 
-    var time : String
+    var time : Int
 ) {
     @PrimaryKey(autoGenerate = true)
     var id : Long = 0L

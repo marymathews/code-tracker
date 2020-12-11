@@ -12,6 +12,7 @@
     <dimen name="margin_6_dp">6dp</dimen>
     <dimen name="image_padding_5_dp">5dp</dimen>
     <dimen name="header_padding_40_dp">40dp</dimen>
+    <dimen name="chart_height">500dp</dimen>
 
     <dimen name="large_text_18_sp">18sp</dimen>
     <dimen name="x_large_text_20_sp">20sp</dimen>

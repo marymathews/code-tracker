@@ -10,6 +10,7 @@ import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 import org.joda.time.format.DateTimeFormat
 import java.lang.Exception
+import java.util.*
 import javax.inject.Inject
 
 class AddSessionDetailsPresenter
@@ -70,14 +71,14 @@ class AddSessionDetailsPresenter
         val entity = SessionEntity(
             view.state.problemTitle ?: "",
             view.state.problemDescription,
-            view.state.site ?: "",
+            view.state.site?.toUpperCase(Locale.getDefault()) ?: "",
             view.state.link,
-            view.state.level ?: "",
+            view.state.level?.toUpperCase(Locale.getDefault()) ?: "",
             view.state.solutionDescription,
             view.state.timeComplexity,
             view.state.spaceComplexity,
-            view.state.date ?: "",
-            view.state.time ?: ""
+            getDateTimeFormattedDate(view.state.date),
+            view.state.time?.toInt() ?: 0
         )
 
         scope.launch(Dispatchers.IO) {
@@ -85,6 +86,11 @@ class AddSessionDetailsPresenter
             showMessage(isInsertSuccessful)
             view.state.isDataProcessingInProgress = false
         }
+    }
+
+    private fun getDateTimeFormattedDate(enteredDate : String?) : String {
+       val date = dateFormatter.parseDateTime(enteredDate)
+        return date.toString(dateFormatter)
     }
 
     private fun showMessage(isSuccessful : Boolean) {

@@ -27,6 +27,11 @@ class ViewInsightsActivity : AppCompatActivity() {
         component.injectViewInsightsActivity(this)
 
         setContentView(view)
+        presenter.onCreate(MainScope())
+    }
+
+    override fun onBackPressed() {
+        presenter.onBackPressed()
     }
 
 

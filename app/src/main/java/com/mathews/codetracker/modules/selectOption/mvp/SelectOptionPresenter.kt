@@ -12,6 +12,7 @@ class SelectOptionPresenter
     fun onCreate() {
         compositeDisposables.add(getEnterDetailsClickedObservable())
         compositeDisposables.add(getViewDetailsClickedObservable())
+        compositeDisposables.add(getViewInsightsClickedObservable())
     }
 
     private fun getEnterDetailsClickedObservable(): Disposable {
@@ -23,6 +24,12 @@ class SelectOptionPresenter
     private fun getViewDetailsClickedObservable() : Disposable {
         return view.getViewDetailsClickedObservable().subscribe {
             model.navigateToViewSessionListScreen()
+        }
+    }
+
+    private fun getViewInsightsClickedObservable() : Disposable {
+        return view.getViewInsightsClickedObservable().subscribe {
+            model.navigateToViewInsightsScreen()
         }
     }
 

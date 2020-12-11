@@ -25,4 +25,8 @@ class SelectOptionView
     fun getViewDetailsClickedObservable() : Observable<Any> {
         return RxView.clicks(btn_view_details)
     }
+
+    fun getViewInsightsClickedObservable() : Observable<Any> {
+        return RxView.clicks(btn_view_insights)
+    }
 }

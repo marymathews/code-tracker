@@ -42,11 +42,17 @@
     <string name="session_view_date">\t %s</string>
     <string name="delete">Delete Session</string>
     <string name="delete_session">Delete \'%s\' ?</string>
-    <string name="time_taken">%s minutes</string>
+    <string name="time_taken">%d minutes</string>
     <string name="problem">Question: %s</string>
     <string name="solution">Solution: %s</string>
     <string name="space">%s space complexity</string>
     <string name="time">%s time complexity</string>
     <string name="database_error">Something\'s not right! Please try again later.</string>
+    <string name="chart_level_count">Number of Questions of Each Level</string>
+    <string name="chart_level_time">Average Time Spent for Questions of Each Level</string>
+    <string name="chart_site_count">Number of Questions from Each Site</string>
+    <string name="avg_sessions">Average Number of Questions Solved Per Day: %.2f</string>
+    <string name="total_number">Total Number of Questions Solved : %d</string>
+    <string name="no_insights">You haven\'t saved enough data to display insights</string>
 
 </resources>

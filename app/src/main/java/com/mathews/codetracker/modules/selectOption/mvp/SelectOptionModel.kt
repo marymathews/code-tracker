@@ -2,6 +2,7 @@ package com.mathews.codetracker.modules.selectOption.mvp
 
 import androidx.appcompat.app.AppCompatActivity
 import com.mathews.codetracker.modules.addSessionDetails.AddSessionDetailsActivity
+import com.mathews.codetracker.modules.viewInsights.ViewInsightsActivity
 import com.mathews.codetracker.modules.viewSessionList.ViewSessionListActivity
 import com.mathews.database_module.DatabaseClass
 import javax.inject.Inject
@@ -15,5 +16,9 @@ class SelectOptionModel
 
     fun navigateToViewSessionListScreen() {
         ViewSessionListActivity.start(activity)
+    }
+
+    fun navigateToViewInsightsScreen() {
+        ViewInsightsActivity.start(activity)
     }
 }
