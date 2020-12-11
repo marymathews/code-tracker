@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+  android:layout_height="wrap_content"
+  android:layout_width="match_parent"
+  android:scrollbars="vertical"
+  android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" >
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+      android:id="@+id/cv_header"
+      app:layout_constraintTop_toTopOf="parent"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" >
+
+      <TextView
+        android:id="@+id/tv_header_view_sessions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/view_sessions"
+        android:fontFamily="@font/sharp_sans_no1_semibold"
+        android:textSize="@dimen/large_text_18_sp"
+        android:textAlignment="center"
+        android:layout_margin="@dimen/margin_16_dp"
+        />
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+      android:id="@+id/divider"
+      app:layout_constraintTop_toBottomOf="@id/cv_header"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/divider_height_1_dp"
+      android:background="@color/colorPrimaryDark"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+      android:visibility="visible"
+      android:id="@+id/rv_sessions"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintTop_toBottomOf="@id/divider"
+      android:padding="@dimen/margin_16_dp" />
+
+    <TextView
+      android:visibility="gone"
+      android:id="@+id/tv_no_sessions"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/no_sessions"
+      android:fontFamily="@font/sharp_sans_no1_medium"
+      android:layout_marginTop="@dimen/margin_16_dp"
+      android:gravity="center"
+      app:layout_constraintTop_toBottomOf="@id/divider"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
