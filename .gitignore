@@ -13,5 +13,5 @@
 /captures
 .externalNativeBuild
 .cxx
-app/keystore
+app/.keystore
 app/release
