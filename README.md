@@ -16,13 +16,13 @@
 * Follow the steps in the app. Here are some examples:
 
 
-* ![Enter Session Details Part 1](https://github.com/marymathews/code-tracker/blob/master/results/enter_session_data_one.jpeg)
-* ![Enter Session Details Part 2](https://github.com/marymathews/code-tracker/blob/master/results/enter_session_data_two.jpeg)
-* ![View Saved Sessions](https://github.com/marymathews/code-tracker/blob/master/results/view_saved_sessions.jpeg)
-* ![View Session Details](https://github.com/marymathews/code-tracker/blob/master/results/view_session_details.jpeg)
-* ![View Insights Part 1](https://github.com/marymathews/code-tracker/blob/master/results/view_insights_one.jpeg)
-* ![View Insights Part 2](https://github.com/marymathews/code-tracker/blob/master/results/view_insights_two.jpeg)
-* ![View Insights Part 3](https://github.com/marymathews/code-tracker/blob/master/results/view_insights_three.jpeg)
+* ![Enter Session Details Part 1](https://github.com/marymathews/code-tracker/blob/master/results/enter_session_data_one.png)
+* ![Enter Session Details Part 2](https://github.com/marymathews/code-tracker/blob/master/results/enter_session_data_two.png)
+* ![View Saved Sessions](https://github.com/marymathews/code-tracker/blob/master/results/view_saved_sessions.png)
+* ![View Session Details](https://github.com/marymathews/code-tracker/blob/master/results/view_session_details.png)
+* ![View Insights Part 1](https://github.com/marymathews/code-tracker/blob/master/results/view_insights_one.png)
+* ![View Insights Part 2](https://github.com/marymathews/code-tracker/blob/master/results/view_insights_two.png)
+* ![View Insights Part 3](https://github.com/marymathews/code-tracker/blob/master/results/view_insights_three.png)
 
 ## Attributions:
 * App icon - https://www.instagram.com/maroon_trails/
