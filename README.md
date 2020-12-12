@@ -12,6 +12,7 @@
 
 ## A How-To Guide:
 * [Download and install the apk on your phone](https://github.com/marymathews/code-tracker/blob/master/results/release_1.0_1_codetracker_2020121213.apk)
+* [Download and install the apk using adb if the previous method doesn't work](https://developer.android.com/studio/command-line/adb#move)
 * Follow the steps in the app. Here are some examples:
 
 
