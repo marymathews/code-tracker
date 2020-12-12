@@ -22,9 +22,27 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    signingConfigs {
+        release {
+            storeFile file(project.property("codetracker.signing"))
+            storePassword project.property("codetracker.keyPassword")
+            keyAlias project.property("codetracker.keyAlias")
+            keyPassword project.property("codetracker.keyPassword")
+        }
+    }
+
     buildTypes {
         release {
+            debuggable false
+            signingConfig signingConfigs.release
             minifyEnabled false
+            android.applicationVariants.all { variant ->
+                variant.outputs.all {
+                    def date = new Date()
+                    def formattedDate = date.format('yyyyMMddHH')
+                    outputFileName = "${variant.name}_${variant.versionName}_${variant.versionCode}_" + project.property('codetracker.project.name') + '_' + formattedDate + '.apk'
+                }
+            }
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
