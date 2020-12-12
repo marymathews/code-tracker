@@ -25,7 +25,7 @@
 * ![View Insights Part 3](https://github.com/marymathews/code-tracker/blob/master/results/view_insights_three.png)
 
 ## Attributions:
-* App icon - https://www.instagram.com/maroon_trails/
+* [App icon](https://github.com/marymathews/code-tracker/blob/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png) - https://www.instagram.com/maroon_trails/
 * [Web vector created by stories - www.freepik.com](https://www.freepik.com/vectors/web)
 * [Background vector created by freepik - www.freepik.com](https://www.freepik.com/vectors/background)
 * [Background photo created by rawpixel.com - www.freepik.com](https://www.freepik.com/photos/background)
